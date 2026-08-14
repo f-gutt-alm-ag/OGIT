@@ -1,6 +1,8 @@
 @prefix owl:                    <http://www.w3.org/2002/07/owl#> .
 @prefix ogit.Project:           <http://www.purl.org/ogit/Project/> .
 @prefix ogit.Forms:             <http://www.purl.org/ogit/Forms/> .
+@prefix ogit.Documents:         <http://www.purl.org/ogit/Documents/> .
+@prefix ogit.Legal:             <http://www.purl.org/ogit/Legal/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
@@ -37,6 +39,9 @@ ogit:Task
 		[ ogit:generates	ogit:Timeseries ]
 		[ ogit:generates	ogit.Forms:Form ]
 		[ ogit:creates		ogit:Notification ]
+		[ ogit:consumes		ogit.Documents:Document ]
+		[ ogit:consumes		ogit.Forms:Form ]
+		[ ogit:consumes		ogit.Legal:LegalClause ]
 		[ ogit:belongs		ogit.Project:Project ]
 	);
 .
